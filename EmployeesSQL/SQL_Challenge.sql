@@ -71,4 +71,13 @@ SELECT first_name, last_name, hire_date
 from employees
 WHERE hire_date BETWEEN '1986-01-01' and '1986-12-31';
 
+-- 3. list manager of each department along with dept_no, dept_name, emp_no, last_name, first_name
+SELECT m.dept_no, d.dept_name, e.emp_no, e.last_name, e.first_name
+from dept_manager m
+left join employees e
+on m.emp_no = e.emp_no
+left join department d 
+on m.dept_no = d.dept_no;
+
+
 
