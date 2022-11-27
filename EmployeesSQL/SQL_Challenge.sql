@@ -79,5 +79,13 @@ on m.emp_no = e.emp_no
 left join department d 
 on m.dept_no = d.dept_no;
 
+-- 4. list dept_no for each employee with emp_no, last_name, first_name, dept_name
+select i.dept_no, e.emp_no, e.last_name, e.first_name, d.dept_name
+from dept_emp i
+left join employees e
+on i.emp_no = e.emp_no
+left join department d
+on d.dept_no = i.dept_no;
+
 
 
