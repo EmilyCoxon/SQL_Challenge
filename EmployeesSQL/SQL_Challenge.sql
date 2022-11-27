@@ -94,6 +94,11 @@ select first_name, last_name, sex
 from employees
 where first_name = 'Hercules' and last_name like 'B%';
 
-
+-- 6. list each employee in the sales dept with emp_no, last_name, first_name
+select d.emp_no, e.last_name, e.first_name
+from employees e
+left join dept_emp d
+on d.emp_no = e.emp_no
+where dept_no = 'd007';
 
 
