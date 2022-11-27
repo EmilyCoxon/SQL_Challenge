@@ -95,10 +95,21 @@ from employees
 where first_name = 'Hercules' and last_name like 'B%';
 
 -- 6. list each employee in the sales dept with emp_no, last_name, first_name
-select d.emp_no, e.last_name, e.first_name
+select d.emp_no, e.last_name, e.first_name, i.dept_name
 from employees e
 left join dept_emp d
 on d.emp_no = e.emp_no
 where dept_no = 'd007';
+
+-- 7. list each employee in Sales and Development depts include: emp_no, last_name, first_name, dept_name
+select d.emp_no, e.last_name, e.first_name, i.dept_name
+from employees e
+left join dept_emp d
+on d.emp_no = e.emp_no
+left join department i
+on d.dept_no = i.dept_no
+where dept_name = 'Sales' or dept_name = 'Development';
+
+--
 
 
