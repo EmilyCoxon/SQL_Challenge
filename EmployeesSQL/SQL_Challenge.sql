@@ -7,6 +7,8 @@ CREATE TABLE department (
 	dept_name VARCHAR NOT NULL
 );
 
+select * from salaries
+
 -- create table for title
 CREATE TABLE title (
 	title_id VARCHAR PRIMARY KEY,
@@ -56,6 +58,11 @@ CREATE TABLE dept_emp (
 	FOREIGN KEY (dept_no) REFERENCES department (dept_no)
 );
 	
+-- --- 1. List emp_no, last_name, first_name, sex, salary for each employee
+
 	
-	
-	
+SELECT e.emp_no, e.last_name, e.first_name, e.sex, s.salary
+from employees e
+left join salaries s
+on e.emp_no = s.emp_no;
+
