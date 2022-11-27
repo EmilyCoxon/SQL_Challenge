@@ -1,105 +1,112 @@
-# SQL_Challenge
-Background
-It’s been two weeks since you were hired as a new data engineer at Pewlett Hackard (a fictional company). Your first major task is to do a research project about people whom the company employed during the 1980s and 1990s. All that remains of the employee database from that period are six CSV files.
+# sql-challenge
+Module 9 Challenge - 221119md started, 221127md completed
 
-For this project, you’ll design the tables to hold the data from the CSV files, import the CSV files into a SQL database, and then answer questions about the data. That is, you’ll perform data modelling, data engineering, and data analysis, respectively.
+Instructions are as follows:
 
-Before You Begin
-Create a new repository for this project called sql-challenge. Do not add this assignment to an existing repository.
+# Unit 9 Homework: Employee Database
 
-Clone the new repository to your computer.
+## Background
 
-Inside your local Git repository, create a directory for this Challenge. Use a folder name that corresponds to the Challenge, such as EmployeeSQL.
+It’s a beautiful spring day, and it’s been two weeks since you were hired as a new data engineer at Pewlett Hackard. Your first major task is a research project on employees of the corporation from the 1980s and 1990s. All that remains of the database of employees from that period are six CSV files.
 
-Note that you’ll add your files to this folder and push the changes to GitHub.
+In this assignment, you will design the tables to hold data in the CSVs, import the CSVs into a SQL database, and answer questions about the data. In other words, you will perform **data modelling**, **data engineering**, and **data analysis**.
+## Before You Begin
 
-Files
-Download the following files to help you get started:
+1. Create a new repository for this project called `sql-challenge`. **Do not add this homework assignment to an existing repository**.
 
-Module 9 Challenge filesLinks to an external site.
+2. Clone the new repository to your computer.
 
-Instructions
-This Challenge is divided into three parts: data modelling, data engineering, and data analysis.
+3. Inside your local Git repository, create a directory for the SQL challenge. Use a folder name that corresponds to this assignment, like `EmployeeSQL`.
 
-Data Modelling
-Inspect the CSV files, and then sketch an ERD of the tables. To create the sketch, feel free to use a tool like QuickDBD Links to an external site..
+4. Add your files to this folder.
 
-Data Engineering
-Use the provided information to create a table schema for each of the six CSV files. Be sure to do the following:
+5. Push these changes to GitHub.
 
-Remember to specify the data types, primary keys, foreign keys, and other constraints.
+## Instructions
 
-For the primary keys, verify that the column is unique. Otherwise, create a composite key Links to an external site., which takes two primary keys to uniquely identify a row.
+This assignment is divided into three parts: data modelling, data engineering, and data analysis. 
 
-Be sure to create the tables in the correct order to handle the foreign keys.
+#### Data Modelling
 
-Import each CSV file into its corresponding SQL table.
+Inspect the CSVs and sketch out an ERD of the tables. Feel free to use a tool like [http://www.quickdatabasediagrams.com](http://www.quickdatabasediagrams.com).
 
-HINT
-Data Analysis
-List the employee number, last name, first name, sex, and salary of each employee.
+#### Data Engineering
 
-List the first name, last name, and hire date for the employees who were hired in 1986.
+* Use the provided information to create a table schema for each of the six CSV files. Remember to specify data types, primary keys, foreign keys, and other constraints.
 
-List the manager of each department along with their department number, department name, employee number, last name, and first name.
+  * For the primary keys, verify that the column is unique. Otherwise, create a [composite key](https://en.wikipedia.org/wiki/Compound_key), which takes two primary keys to uniquely identify a row.
 
-List the department number for each employee along with that employee’s employee number, last name, first name, and department name.
+  * Be sure to create tables in the correct order to handle foreign keys.
 
-List the first name, last name, and sex of each employee whose first name is Hercules and whose last name begins with the letter B.
+* Import each CSV file into the corresponding SQL table. 
 
-List each employee in the Sales department, including their employee number, last name, and first name.
+  > **Hint:** To avoid errors, be sure to import the data in the same order that the tables were created. Also remember to account for the headers when importing.
 
-List each employee in the Sales and Development departments, including their employee number, last name, first name, and department name.
+#### Data Analysis
 
-List the frequency counts, in descending order, of all the employee last names (that is, how many employees share each last name).
+Once you have a complete database, perform these steps:
 
-Requirements
-Data Modelling (10 points)
-Entity Relationship Diagram is included or table schemas provided for all tables (10 points)
-Data Engineeing (70 points)
-All required columns are defined for each table (10 points)
-Columns are set to the correct data type (10 points)
-Primary Keys set for each table (10 points)
-Correctly references related tables (10 points)
-Tables are correctly related using Foreign Keys (10 points)
-Correctly uses NOT NULL condition on necessary columns (10 points)
-Accurately defines value length for columns (10 points)
-Data Analysis (20 points)
-List the employee number, last name, first name, sex, and salary of each employee (2 points)
-List the first name, last name, and hire date for the employees who were hired in 1986 (2 points)
-List the manager of each department along with their department number, department name, employee number, last name, and first name (2 points)
-List the department number for each employee along with that employee’s employee number, last name, first name, and department name (2 points)
-List first name, last name, and sex of each employee whose first name is Hercules and whose last name begins with the letter B (2 points)
-List each employee in the Sales department, including their employee number, last name, and first name (2 points)
-List each employee in the Sales and Development departments, including their employee number, last name, first name, and department name (4 points)
-List the frequency counts, in descending order, of all the employee last names (that is, how many employees share each last name) (4 points)
-Grade	Points
-A (+/-)	90+
-B (+/-)	80–89
-C (+/-)	70–79
-D (+/-)	60–69
-F (+/-)	< 60
-Submission
-Before submitting your Challenge assignment, make sure that you’ve done the following:
+1. List the following details of each employee: employee number, last name, first name, sex, and salary.
 
-Create an image file of your ERD.
+2. List first name, last name, and hire date for employees who were hired in 1986.
 
-Create a .sql file of your table schemata.
+3. List the manager of each department with the following information: department number, department name, the manager's employee number, last name, first name.
 
-Create a .sql file of your queries.
+4. List the department of each employee with the following information: employee number, last name, first name, and department name.
 
-(Optional) Create a Jupyter notebook of the bonus analysis.
+5. List first name, last name, and sex for employees whose first name is "Hercules" and last names begin with "B."
 
-Ensure that your repository has regular commits and a thorough README.md file
+6. List all employees in the Sales department, including their employee number, last name, first name, and department name.
 
-To submit your Challenge assignment, click Submit, and then provide the URL of your GitHub repository for grading.
+7. List all employees in the Sales and Development departments, including their employee number, last name, first name, and department name.
 
-NOTE
-You are allowed to miss up to two Challenge assignments and still earn your certificate. If you complete all Challenge assignments, your lowest two grades will be dropped. If you wish to skip this assignment, click Next, and move on to the next module.
+8. List the frequency count of employee last names (i.e., how many employees share each last name) in descending order.
 
-Comments are disabled for graded submissions in Bootcamp Spot. If you have questions about your feedback, please notify your instructional staff or your Student Success Manager. If you would like to resubmit your work for an additional review, you can use the Resubmit Assignment button to upload new links. You may resubmit up to three times for a total of four submissions.
+## Bonus (Optional)
 
-References
-Data generated by Mockaroo, LLC Links to an external site., (2022). Realistic Data Generator.
+As you examine the data, you begin to suspect that the dataset is fake. Maybe your boss gave you spurious data in order to test the data engineering skills of a new employee? To confirm your hunch, you decide to create a visualisation of the data to present to your boss. Follow these steps: 
 
-© 2022 edX Boot Camps LLC
+1. Import the SQL database into Pandas. (Yes, you could read the CSVs directly in Pandas, but you are, after all, trying to prove your technical mettle.) This step may require some research. Feel free to use the following code to get started. Be sure to make any necessary modifications for your username, password, host, port, and database name:
+
+   ```sql
+   from sqlalchemy import create_engine
+   engine = create_engine('postgresql://localhost:5432/<your_db_name>')
+   connection = engine.connect()
+   ```
+
+    * Consult the [SQLAlchemy documentation](https://docs.sqlalchemy.org/en/latest/core/engines.html#postgresql) for more information.
+
+    * If you’re using a password, do not upload your password to your GitHub repository. Review this [video](https://www.youtube.com/watch?v=2uaTPmNvH0I) and the [GitHub website](https://help.github.com/en/github/using-git/ignoring-files) for more information.
+
+2. Create a histogram to visualise the most common salary ranges for employees.
+
+3. Create a bar chart of average salary by title.
+
+
+## Submission
+
+* Create an image file of your ERD.
+
+* Create a `.sql` file of your table schemata.
+
+* Create a `.sql` file of your queries.
+
+* (Optional) Create a Jupyter notebook of the bonus analysis.
+
+* Create and upload a repository with the above files to GitHub and post a link on BootCamp Spot.
+
+* Ensure your repository has regular commits and a thorough README.md file
+
+## Rubric
+
+[Unit 9 Homework Rubric](https://docs.google.com/document/d/1OksnTYNCT0v0E-VkhIMJ9-iG0_oXNwCZAJlKV0aVMKQ/edit?usp=sharing)
+
+- - -
+
+## References
+
+Mockaroo, LLC. (2021). Realistic Data Generator. [https://www.mockaroo.com/](https://www.mockaroo.com/)
+
+- - -
+
+© 2022 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.
