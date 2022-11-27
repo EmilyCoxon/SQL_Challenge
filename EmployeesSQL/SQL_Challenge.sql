@@ -31,7 +31,7 @@ CREATE TABLE employees (
 	sex VARCHAR NOT NULL,
 	hire_date DATE NOT NULL
 );
-
+select * from employees;
 
 -- table for dept_manager
 CREATE TABLE dept_manager (
@@ -65,4 +65,10 @@ SELECT e.emp_no, e.last_name, e.first_name, e.sex, s.salary
 from employees e
 left join salaries s
 on e.emp_no = s.emp_no;
+
+-- 2. list first_name last_name, hire_date for employees hired in 1986
+SELECT first_name, last_name, hire_date
+from employees
+WHERE hire_date BETWEEN '1986-01-01' and '1986-12-31';
+
 
