@@ -87,5 +87,13 @@ on i.emp_no = e.emp_no
 left join department d
 on d.dept_no = i.dept_no;
 
+-- 5. list first_name, last_name, sex for each employee with 
+--     first name hercules and last name begins with B
+
+select first_name, last_name, sex
+from employees
+where first_name = 'Hercules' and last_name like 'B%';
+
+
 
 
